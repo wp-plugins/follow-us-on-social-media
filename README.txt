@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Follow Us On Social Media ===
 Tags:  Facebook, google, icons, instagram, linkedin, skype, social, social media, twitter, vimeo, yelp, youtube 
 Stable tag: 1.0.0
 License: GPLv2 or later
