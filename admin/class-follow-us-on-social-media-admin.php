@@ -21,7 +21,7 @@
  * @package Follow_Us_On_Social_Media 
  * @author  Dave Bush <dave@nimkeesoftware.com>
  */
-class Class_Follow_Us_On_Social_Media_Admin {
+class Follow_Us_On_Social_Media_Admin {
 
 	/**
 	 * Instance of this class.
@@ -86,7 +86,7 @@ class Class_Follow_Us_On_Social_Media_Admin {
 		 * Read more about actions and filters:
 		 * http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
 		 */
-		add_action( '@TODO', array( $this, 'action_method_name' ) );
+		add_action( 'init', array( $this, 'settings_init' ) );
 		add_filter( '@TODO', array( $this, 'filter_method_name' ) );
 
 	}
@@ -119,10 +119,6 @@ class Class_Follow_Us_On_Social_Media_Admin {
 
 	/**
 	 * Register and enqueue admin-specific style sheet.
-	 *
-	 * @TODO:
-	 *
-	 * - Rename "Follow_Us_On_Social_Media" to the name your plugin
 	 *
 	 * @since     1.0.0
 	 *
@@ -187,8 +183,8 @@ class Class_Follow_Us_On_Social_Media_Admin {
 		 *   For reference: http://codex.wordpress.org/Roles_and_Capabilities
 		 */
 		$this->plugin_screen_hook_suffix = add_options_page(
-			__( 'Page Title', $this->plugin_slug ),
-			__( 'Menu Text', $this->plugin_slug ),
+			__( 'Follow Us On Social Media', $this->plugin_slug ),
+			__( 'Follow Us On Social Media', $this->plugin_slug ),
 			'manage_options',
 			$this->plugin_slug,
 			array( $this, 'display_plugin_admin_page' )
@@ -230,9 +226,43 @@ class Class_Follow_Us_On_Social_Media_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function action_method_name() {
-		// @TODO: Define your action hook callback here
-	}
+	public function settings_init() {
+
+    $settings = get_option('fuosm_settings');
+
+    if ( empty( $settings ) ) {
+      $settings = array(
+        'twitter' => '',
+        'facebook' => '',
+        'facebook_badge' => '',
+        'googleplus' => '',
+        'googleplus_profile' => '',
+        'linkedin' => '',
+        'linkedin_profile' => '',
+        'youtube' => '',
+        'pinterest' => '', 'flickr' => '',
+        'colour_scheme_twitter' => 'light',
+        'replies_twitter' => 'false',
+        'replies_facebook' => 'false',
+        'colour_scheme_facebook' => 'light',
+        'faces_facebook' => 'false',
+        'stream_facebook' => 'true',
+        'side_linkedin' => 'left',
+        'openSelection' => '1',
+        'collapsible' => 'true',
+        'allClosed' => 'true',
+        'style' => 'Skeleton',
+        'icons' => 'Colours',
+        'createdBy' => 'true',
+        'loadJqueryUI' => 'true',
+        'loadScripts' => array('jQuery' => 'true',
+                                'jQuery-ui-core' => 'true',
+                                'jQuery-ui-accordion' => 'true')
+      );
+
+      add_option('fuosm_settings', $settings, '', 'yes');
+    }	
+  }
 
 	/**
 	 * NOTE:     Filters are points of execution in which WordPress modifies data
