@@ -4,11 +4,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Create Follow Us badges for all the major social media platforms.
 
 == Description ==
 
-Just another social media follow us plugin. The plugin gives the user the ability to add follow us icons to their blog to various social media websites like facebook, twitter, etc.
+Follow Us On Social Media allows you to add Follow Us badges your wordpress site for various social media websites like facebook, twitter, etc.
+
+NOTE: This plugin is currently under contruction ... Please stand by.  If you have ideas or comments on how to make a better Follow Us plugin please post them in the review section and I would be glad to try to include them.
 
 === Installation ===
 
