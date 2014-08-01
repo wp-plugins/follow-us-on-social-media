@@ -36,9 +36,6 @@ if ( ! defined( 'WPINC' ) ) {
  *----------------------------------------------------------------------------*/
 
 /*
- * @TODO:
- *
- * - replace `class-plugin-name.php` with the name of the plugin's class file
  *
  */
 require_once( plugin_dir_path( __FILE__ ) . 'public/class-follow-us-on-social-media.php' );
