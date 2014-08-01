@@ -15,7 +15,7 @@
  * Plugin Name:       Follow Us on Social Media 
  * Plugin URI:        https://github.com/bush/follow-us-on-social-media
  * Description:       Just Another Follow Us Plugin
- * Version:           1.0.0
+ * Version:           1.0.4
  * Author:            Dave Bush
  * Author URI:        http://nimkeesoftware.com
  * Text Domain:       follow-us-on-social-media-locale
